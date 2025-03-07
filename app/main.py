@@ -95,7 +95,9 @@ class Dictionary:
             return item
         return default
 
-    def update(self, other_dict: Union[dict[Any, Any], list[tuple[Any, Any]]]) -> None:
+    def update(
+            self, other_dict: Union[dict[Any, Any], list[tuple[Any, Any]]]
+    ) -> None:
         if not isinstance(other_dict, dict):
             for item in other_dict:
                 key, value = item
